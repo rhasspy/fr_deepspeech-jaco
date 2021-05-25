@@ -9,7 +9,6 @@ language:
 speech-to-text:
   acoustic-model-type: "deepspeech"
   acoustic-model: !env "${profile_dir}/model/output_graph.pbmm"
-  language-model: !env "${profile_dir}/lm.binary"
   scorer: !env "${profile_dir}/scorer"
   base-scorer: !env "${profile_dir}/model/base.scorer"
   alphabet: !env "${profile_dir}/model/alphabet.txt"
@@ -17,7 +16,6 @@ speech-to-text:
 
 training:
   acoustic-model-type: "deepspeech"
-  language-model: !env "${profile_dir}/lm.binary"
   large-files:
     - !env "${profile_dir}/model/base.scorer"
     - !env "${profile_dir}/model/output_graph.pbmm"
